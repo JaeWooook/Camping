@@ -1,0 +1,7 @@
+.dropdown {
+  box-shadow: 10px 10px 5px #888888;
+  background-color: #eee;
+  border: 1px solid black;
+  width: 24%;
+  list-style: none;
+}
