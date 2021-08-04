@@ -1,18 +1,45 @@
+import React from "react";
+import styled from "styled-components";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+//main page
 import MainContainer from "./containers/MainContainer";
+
+//sign page
 import SignUpContainer from "./containers/SignUpContainer";
 import SignInContainer from "./containers/SignInContainer";
-import HeaderContainer from "./containers/HeaderContainer";
+
+//search result page
+
+//search list detail page
+
+//404page
+import Page404 from "./components/exception/Page404";
+
+//img file
+import Background from "./store/img/camping_bg2.jpeg";
+
+const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(${Background});
+  background-size: cover;
+`;
 
 function App() {
   return (
     <BrowserRouter>
-      <HeaderContainer />
-      <Switch>
-        <Route exact path="/" component={MainContainer} />
-        <Route path="/SignIn" component={SignInContainer} />
-        <Route path="/SignUp" component={SignUpContainer} />
-      </Switch>
+      <Container>
+        <Switch>
+          <Route exact path="/" component={MainContainer} />
+          <Route path="/SignIn" component={SignInContainer} />
+          <Route path="/SignUp" component={SignUpContainer} />
+          <Route component={Page404} />
+        </Switch>
+      </Container>
     </BrowserRouter>
   );
 }

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import UserInfo from "../components/UserInfo";
-import SearchBar from "../components/SearchBar";
-import DropdownBtn from "../components/DropdownBtn";
+import { Link } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
+import UserInfo from "../components/header/UserInfo";
+import SearchBar from "../components/header/SearchBar";
+import DropdownBtn from "../components/header/DropdownBtn";
+import "./HeaderContainer.css";
 
 const HeaderContainer = () => {
   //useEffect 이용해서 userlogin 여부 판단
@@ -9,11 +12,20 @@ const HeaderContainer = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
-    <div>
+    <div className="HeaderContainer">
       <span>
+        <Link to="/" className="Header-logo">
+          Algo Camping
+        </Link>
         <DropdownBtn />
         <SearchBar />
-        {loggedIn ? <UserInfo /> : <a href="/SignIn">로그인</a>}
+        {loggedIn ? (
+          <UserInfo />
+        ) : (
+          <Link className="Header-login-btn" to="/SignIn">
+            <FaUserCircle></FaUserCircle>로그인
+          </Link>
+        )}
       </span>
       <div>
         <span>태그 혹은 캠핑장을 입력하세요. ex) 친절한, 알고캠핑장</span>
