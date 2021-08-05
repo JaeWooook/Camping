@@ -5,3 +5,8 @@
   width: 24%;
   list-style: none;
 }
+
+.selectbtn {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import HeaderContainer from "./HeaderContainer";
 
 const MainContainer = () => {
@@ -7,9 +6,9 @@ const MainContainer = () => {
   return (
     <div>
       <HeaderContainer />
-      <Navbar />
     </div>
   );
 };
 
 export default MainContainer;
+//<Navbar />일단은 삭제 예정

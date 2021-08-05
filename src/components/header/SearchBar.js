@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 const SearchBar = () => {
@@ -14,15 +14,17 @@ const SearchBar = () => {
     //db에서 불러와서 뿌려주면된다.
   };
 
+  useEffect(() => {
+    console.log("search contents", searchs);
+  }, [searchs]);
   return (
     <span>
-      <from onSubmit={handleSubmit}>
-        <input value={searchs} onChange={setSearchsHandler} type="text"></input>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={searchs} onChange={setSearchsHandler} />
         <button>
           <FaSearch></FaSearch>
         </button>
-        <span>{searchs}</span>
-      </from>
+      </form>
     </span>
   );
 };

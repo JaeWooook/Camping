@@ -30,7 +30,7 @@ const DropdownBtn = () => {
   useEffect(() => {
     console.log(isActive);
   }, [isActive]);
-
+  //추후에 select box로 테스트 해볼 것
   return (
     <span>
       <span className="dropdown">
@@ -41,6 +41,7 @@ const DropdownBtn = () => {
           {cityInfos.map((cityInfo) => (
             <li key={cityInfo.id}>
               <Link
+                className="selectbtn"
                 to="/"
                 onClick={() => {
                   setDropItem(cityInfo.name);
