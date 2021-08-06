@@ -10,6 +10,7 @@ import SignUpContainer from "./containers/SignUpContainer";
 import SignInContainer from "./containers/SignInContainer";
 
 //search result page
+import CampingListContainer from "./containers/CampingListContainer";
 
 //search list detail page
 
@@ -37,6 +38,7 @@ function App() {
           <Route exact path="/" component={MainContainer} />
           <Route path="/SignIn" component={SignInContainer} />
           <Route path="/SignUp" component={SignUpContainer} />
+          <Route path="/Search" component={CampingListContainer} />
           <Route component={Page404} />
         </Switch>
       </Container>

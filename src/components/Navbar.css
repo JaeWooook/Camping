@@ -1,4 +1,4 @@
-.gnb-menu {
+/*.gnb-menu {
   background: gray;
   display: flex;
   justify-content: space-around;
@@ -27,4 +27,23 @@
 
 .gnb-menu a:hover::after {
   width: 100%;
+}*/
+
+.navbar {
+  color: white;
+}
+
+.navbar-title {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: calc(1.275rem+0.3vw);
+}
+
+.navbar-total {
+  display: flex;
+  justify-content: space-between;
 }
