@@ -21,7 +21,7 @@ import Page404 from "./components/exception/Page404";
 import Background from "./store/img/camping_bg2.jpeg";
 
 const Container = styled.div`
-  background-image: url(${Background});
+  background-image: url("https://imgsave.s3.us-east-2.amazonaws.com/camping_bg2.jpeg");
   width: 100vw;
   height: 100vh;
   background-attachment: fixed;
