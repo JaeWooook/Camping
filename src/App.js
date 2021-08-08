@@ -21,12 +21,12 @@ import Page404 from "./components/exception/Page404";
 import Background from "./store/img/camping_bg2.jpeg";
 
 const Container = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(${Background});
+  background-image: url(${Background});
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
 `;
 

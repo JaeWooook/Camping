@@ -9,10 +9,9 @@ const MainContainer = () => {
     <div>
       <HeaderContainer />
       <Navbar />
-      <SlideImg />
+      <SlideImg autoflow={2000} />
     </div>
   );
 };
 
 export default MainContainer;
-//<Navbar />일단은 삭제 예정

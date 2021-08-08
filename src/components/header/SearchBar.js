@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useMemo } from "react";
-import Select from "react-select";
-import { useForm } from "react-hook-form";
+import React, { useEffect, useState } from "react";
+// import Select from "react-select";
+// import { useForm } from "react-hook-form";
 import { FaSearch } from "react-icons/fa";
 
 const cityInfos = [
@@ -24,8 +24,8 @@ const cityInfos = [
 ];
 
 const SearchBar = () => {
-  const [cityName, setCityName] = useState("");
-  const { selectSubmit, selectReg } = useForm();
+  const [cityName, setCityName] = useState("전체");
+  // const { selectSubmit, selectReg } = useForm();
   const [searchs, setSearhs] = useState("");
 
   const setSearchsHandler = (e) => {
@@ -33,30 +33,35 @@ const SearchBar = () => {
     setSearhs(e.target.value);
   };
 
-  const selectedCityName = (e) => {
-    console.log(e);
-    // const text = e.options[e.selectedIndex].text;
-    // console.log(text);
-    console.log(e.options);
+  const selectedCityName = (data) => {
+    setCityName(data);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     //리덕스에 저장?굳이 할필요가 있는지 고민
     //db에서 불러와서 뿌려주면된다.
-  };
-  const options = useMemo(() => cityInfos, []);
-  useEffect(() => {
     console.log("search contents", searchs);
     console.log("selected cityName", cityName);
-  }, [searchs, cityName]);
+    //리덕스 이용해서 검색컨테이너로 넘겨준다?
+  };
+
+  // useEffect(() => {
+  //   console.log("search contents", searchs);
+  //   console.log("selected cityName", cityName);
+  // }, [searchs, cityName]);
 
   return (
     <span>
       <form onSubmit={handleSubmit}>
-        <select name="cityname" onChange={selectedCityName}>
+        <select
+          name="cityname"
+          onChange={(e) => selectedCityName(e.target.value)}
+        >
           {cityInfos.map((cityInfo) => (
-            <option value={cityInfo.value}>{cityInfo.label}</option>
+            <option key={cityInfo.value} value={cityInfo.value}>
+              {cityInfo.label}
+            </option>
           ))}
         </select>
         <input type="text" value={searchs} onChange={setSearchsHandler} />
@@ -69,10 +74,3 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
-{
-  /* <select name="cityname" onChange={selectedCityName}>
-          {cityInfos.map((cityInfo) => (
-            <option value={cityInfo.id}>{cityInfo.name}</option>
-          ))}
-        </select> */
-}
