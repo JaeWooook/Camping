@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import kakao_login_btn from "../store/img/kakao_login_btn.png";
-import naver_login_btn from "../store/img/naver_login_btn.png";
+// import kakao_login_btn from "../store/img/kakao_login_btn.png";
+// import naver_login_btn from "../store/img/naver_login_btn.png";
 import "./SignIn.css";
 
 // import KaKaoLogin from "react-kakao-login";
@@ -29,15 +29,13 @@ const SignIn = ({ history }) => {
     //서버로 보냄
   };
 
-  // const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_KAKAO_JAVASCRIPT_APP_KEY}&redirect_uri=${process.env.REACT_APP_KAKAO_REDIRECT_URL}&response_type=code`;
-
   const handleKakaoLoggin = () => {
     // window.Kakao.init(process.env.REACT_APP_KAKAO_JAVASCRIPT_APP_KEY);
     console.log(window.Kakao);
     window.Kakao.Auth.login({
       success: (authObj) => {
         console.log(authObj);
-        axios(process.env.REACT_APP_KAKAO_REDIRECT_URL, {
+        axios(process.env.REACT_APP_KAKAO_REDIRECT_URI, {
           method: "POST",
           headers: {
             Authorization: authObj.access_token,
@@ -75,11 +73,15 @@ const SignIn = ({ history }) => {
         <div className="contents">
           <hr></hr>
           <div>
-            <button className="kakao-login-btn">카카오 ID로 간편 로그인</button>
+            <button className="kakao-login-btn" onClick={handleKakaoLoggin}>
+              카카오 ID로 간편 로그인
+            </button>
           </div>
           <br></br>
           <div>
-            <button className="naver-login-btn">네이버 ID로 간편 로그인</button>
+            <button className="naver-login-btn" onClick={handleNaverLoggin}>
+              네이버 ID로 간편 로그인
+            </button>
           </div>
           <br></br>
           <hr></hr>

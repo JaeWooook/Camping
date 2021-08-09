@@ -20,7 +20,7 @@ import Page404 from "./components/exception/Page404";
 //loadingpage
 
 //img file
-import Background from "./store/img/camping_bg2.jpeg";
+import Background from "./store/img/final_camping_bg2.jpg";
 
 const Container = styled.div`
   background-image: url("https://imgsave.s3.us-east-2.amazonaws.com/small_camping_bg.jpeg");
