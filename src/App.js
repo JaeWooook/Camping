@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import styled from "styled-components";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -16,6 +16,8 @@ import CampingListContainer from "./containers/CampingListContainer";
 
 //404page
 import Page404 from "./components/exception/Page404";
+
+//loadingpage
 
 //img file
 import Background from "./store/img/camping_bg2.jpeg";

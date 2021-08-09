@@ -34,3 +34,26 @@
 .go-signup {
   color: black;
 }
+
+.kakao-login-btn {
+  outline: none;
+  width: 59%;
+  height: 59%;
+  background-color: #ffe812;
+}
+.kakao-login-btn-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.naver-login-btn {
+  outline: none;
+  width: 59%;
+  height: 59%;
+  background-color: rgb(2, 199, 89);
+}
+
+.naver-login-btn-inner {
+  width: 100%;
+  height: 100%;
+}
