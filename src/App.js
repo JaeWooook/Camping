@@ -21,10 +21,10 @@ import Page404 from "./components/exception/Page404";
 
 //img file
 import Background from "./store/img/mainbackground.jpg";
-//https://imgsave.s3.us-east-2.amazonaws.com/small_camping_bg.jpeg
-// https://cdn.discordapp.com/attachments/871667722352746496/874564087298797579/Meridian-kredsen-Foto_Thomas_D._Mrkeberg-1mb.jpg
+//보정 //https://imgsave.s3.us-east-2.amazonaws.com/small_camping_bg.jpeg
+//원본 https://imgsave.s3.us-east-2.amazonaws.com/mainbackground.jpg
 const Container = styled.div`
-  background-image: url(https://imgsave.s3.us-east-2.amazonaws.com/mainbackground.jpg);
+  background-image: url(https://imgsave.s3.us-east-2.amazonaws.com/small_camping_bg.jpeg);
   width: 100vw;
   height: 100vh;
   background-attachment: fixed;
