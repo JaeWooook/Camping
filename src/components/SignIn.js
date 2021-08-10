@@ -57,7 +57,6 @@ const SignIn = ({ history }) => {
       },
     });
   };
-  //http://172.17.0.108:5000/
 
   const handleNaverLoggin = () => {};
   useEffect(() => {
