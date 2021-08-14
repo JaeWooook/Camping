@@ -25,7 +25,28 @@ const SignIn = ({ history }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log(process.env.REACT_APP_SIGNIN);
+    console.log(process.env.development.REACT_APP_SIGNIN);
+    try {
+      fetch(process.env.REACT_APP_SIGNIN, {
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      })
+        .then((response) => response.json())
+        .then((result) => {
+          if (result.TOKEN) {
+            localStorage.setItem("TOKEN", result.TOKEN);
+            history.push("/");
+          } else {
+            alert("로그인 실패!");
+          }
+        });
+    } catch (error) {
+      console.log(error);
+    }
     //서버로 보냄
   };
 
@@ -35,7 +56,7 @@ const SignIn = ({ history }) => {
     window.Kakao.Auth.login({
       success: (authObj) => {
         console.log(authObj);
-        axios(process.env.REACT_APP_KAKAO_REDIRECT_URI, {
+        axios(process.env.REACT_APP_KAKAO_REDIRECT_URL, {
           method: "POST",
           headers: {
             Authorization: authObj.access_token,

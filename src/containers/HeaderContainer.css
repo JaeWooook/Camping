@@ -8,7 +8,7 @@
 }
 .head-contents {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .head-phrases {

@@ -24,6 +24,24 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     //서버로 보냄
+    try {
+      fetch(process.env.REACT_APP_SIGNUP, {
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+          password: password,
+          name: name,
+        }),
+      })
+        .then((response) => response.json())
+        .then((result) => {
+          result.message === "SUCCESS"
+            ? alert("회원가입 성공")
+            : alert("회원가입 실패");
+        });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {

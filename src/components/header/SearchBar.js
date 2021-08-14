@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 // import Select from "react-select";
 // import { useForm } from "react-hook-form";
 import { FaSearch } from "react-icons/fa";
+import "./SearchBar.css";
 
 const cityInfos = [
   { value: "전체", label: "전체" },
@@ -64,7 +65,12 @@ const SearchBar = () => {
             </option>
           ))}
         </select>
-        <input type="text" value={searchs} onChange={setSearchsHandler} />
+        <input
+          className="search-bar"
+          type="text"
+          value={searchs}
+          onChange={setSearchsHandler}
+        />
         <button>
           <FaSearch></FaSearch>
         </button>
