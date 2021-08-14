@@ -1,4 +1,6 @@
 .search-bar {
-  display: inline-flex;
-  max-width: 100%;
+  display: inline-block;
+  /* width: 80%; */
+  /* max-width: 100%; */
+  border-radius: 1.2rem;
 }

@@ -26,7 +26,8 @@ const HeaderContainer = () => {
             <UserInfo />
           ) : (
             <Link className="Header-login-btn" to="/SignIn">
-              <FaUserCircle></FaUserCircle>로그인
+              <FaUserCircle size="1.5em" color="#1f284a"></FaUserCircle>
+              <span className="user">로그인</span>
             </Link>
           )}
         </div>

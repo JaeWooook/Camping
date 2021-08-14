@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import HeaderContainer from "./HeaderContainer";
-import Navbar from "../components/Navbar";
-import SlideImg from "../components/footer/SlideImg";
+import Navbar from "../components/main/Navbar";
+import SlideImg from "../components/main/SlideImg";
+import AlertWarning from "../components/main/AlertWarning";
 import Stars from "../components/Stars";
-import CheckboxLabel from "../components/main/CheckBoxLabel";
 
 import "./MainContainer.css";
 
 const MainContainer = () => {
+  const [selected, setSelected] = useState(3);
+
   console.log("in Main page");
   return (
     <div className="main">
@@ -16,6 +18,7 @@ const MainContainer = () => {
         <HeaderContainer />
       </header>
       <div className="main-section">
+        {selected >= 3 ? <AlertWarning /> : null}
         <section className="main-navbar">
           <Navbar />
         </section>
