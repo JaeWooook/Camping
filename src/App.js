@@ -20,7 +20,7 @@ import Page404 from "./components/exception/Page404";
 //loadingpage
 
 //img file
-import Background from "./store/img/mainbackground.jpg";
+import Background from "./store/img/camping_bg2.jpeg";
 //보정 //https://imgsave.s3.us-east-2.amazonaws.com/small_camping_bg.jpeg
 //원본 https://imgsave.s3.us-east-2.amazonaws.com/mainbackground.jpg
 const Container = styled.div`
