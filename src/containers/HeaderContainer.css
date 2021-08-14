@@ -19,11 +19,23 @@
   padding-left: var(--bs-gutter-x, 0.75rem); */
   margin-right: auto;
   margin-left: auto;
+  font-size: 0.9rem;
   color: grey;
 }
 
+@font-face {
+  font-family: "Harlow Solid Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Harlow Solid Italic"),
+    url("../store/font/HARLOWSI_1.woff") format("woff");
+}
 .Header-logo {
-  color: teal;
+  color: #1f284a;
+  font-weight: bold;
+  font-size: 1.6rem;
+  border: none;
+  font-family: "Harlow Solid Italic";
   text-decoration: none;
 }
 
@@ -31,10 +43,3 @@
   color: inherit;
   text-decoration: none;
 }
-/*@font-face {
-  font-family: "Harlow Solid Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Harlow Solid Italic"),
-    url("/store/font/HARLOWSI_1.woff") format("woff");
-}*/

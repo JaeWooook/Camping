@@ -1,5 +1,18 @@
 .loginHeader-logo {
-  color: teal;
+  color: #1f284a;
+  font-weight: bold;
+  font-size: 1.6rem;
+  border: none;
+  font-family: "Harlow Solid Italic";
   text-decoration: none;
   background-color: white;
 }
+
+/* @font-face {
+  font-family: "Harlow Solid Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Harlow Solid Italic"),
+    url("../../store/font/HARLOWSI_1.woff") format("woff");
+} */
+/* url("https://imgsave.s3.us-east-2.amazonaws.com/HARLOWSI_1.woff") */

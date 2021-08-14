@@ -5,6 +5,8 @@ import SlideImg from "../components/footer/SlideImg";
 import Stars from "../components/Stars";
 import CheckboxLabel from "../components/main/CheckBoxLabel";
 
+import "./MainContainer.css";
+
 const MainContainer = () => {
   console.log("in Main page");
   return (
@@ -13,13 +15,17 @@ const MainContainer = () => {
       <header className="main-header">
         <HeaderContainer />
       </header>
-      <section className="main-navbar">
-        <Navbar />
-      </section>
-      {/* <CheckboxLabel /> */}
-      <section className="main-slideimg">
-        <SlideImg autoflow={2000} />
-      </section>
+      <div className="main-section">
+        <section className="main-navbar">
+          <Navbar />
+        </section>
+        {/* <CheckboxLabel /> */}
+        <div className="main-slide-container">
+          <section className="main-slideimg">
+            <SlideImg autoflow={2000} />
+          </section>
+        </div>
+      </div>
     </div>
   );
 };
